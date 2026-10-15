@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5fb;
+  color: #26344a;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #2447a5;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.panel {
+  background: white;
+  padding: 22px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px #24304712;
+}
+
+h2 {
+  margin-top: 0;
+  color: #3157bd;
+}
+
+.student-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+input, select {
+  padding: 11px;
+  border: 1px solid #ccd5e3;
+  border-radius: 7px;
+  min-width: 0;
+}
+
+.student-form input {
+  flex: 1 1 180px;
+}
+
+button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 7px;
+  background: #3157bd;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #203f96;
+}
+
+.error {
+  color: #d62828;
+}
+
+table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e6ebf2;
+}
+
+th {
+  background: #eaf0ff;
+}
+
+td button {
+  background: #dc4545;
+}
+
+td button:hover {
+  background: #b92e2e;
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 9px 6px;
+  }
+}
