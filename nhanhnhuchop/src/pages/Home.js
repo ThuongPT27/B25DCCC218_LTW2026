@@ -3,10 +3,16 @@ import { useNavigate } from 'react-router-dom';
 const Home = ({ playerName, setPlayerName, history = [] }) => {
   const navigate = useNavigate();
 
+  // Lượt có điểm cao nhất (null nếu chưa có lượt nào)
+  const record = history.reduce(
+    (best, h) => (best === null || h.score > best.score ? h : best),
+    null
+  );
 
   return (
     <div>
       <h1>Nhanh như chớp</h1>
+      {record && <p>{`Kỷ lục: ${record.score} điểm – ${record.name}`}</p>}
       <h3>Luật chơi</h3>
       <ul>
         <li>15 câu hỏi về HTML, CSS, JavaScript và React, mỗi câu có 15 giây.</li>
